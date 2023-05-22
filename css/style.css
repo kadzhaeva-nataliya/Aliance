@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box; /* Ширина и высота элементов считаются пропорционально */
+}
+body {
+    font-family: "Noto Sans", sans-serif; /*Эта информация из Google-шрифтов, блок CSS rules to specify families*/
+}
+.navbar {
+    background-color: #290303; /*временно*/
+    display: flex; /* Задаем поведение элемента*/
+    align-items: center; /*Выравнивание по центру*/
+    color: #fff;
+    height: 94px;
+}
+
+.header-logo {
+    padding: 25px 50px ;
+}
+.header-nav {
+    flex-basis: 100%;
+    display: flex;
+    padding: 0 50px;
+    list-style: none;
+    margin: 0;
+}
+/* Можно писать свойства в экране просмотра страницы в блоке element.style - сразу наглядный результат. Потом скопировать их и вставить сюда. */
+
+.header-nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 50px;
+    color: inherit;
+
+}
+
+.header-phone {
+    flex-shrink: 0 ; /*Сжатие. 0-не сжимается*/
+    display: flex;
+    align-items: center;
+    gap: 10px; /*расстояние между символом и номером телефона*/
+    text-decoration: none; /*текст не подчеркнутый*/
+    margin-right: 50px;
+}
+.header-phone-link { /*для ссылок надо прописывать стили отдельно, они из класса не подтягиапются*/
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit /*Inherit - цвет как у родительского элемента*/
+}
+.button {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    background: #3A71D1;
+    display: flex;
+    justify-content: center;/*весь контень выравнивается посередине*/
+    align-items: center;
+    padding: 25px 60px;
+    gap: 10px;
+    border: none;
+    flex-shrink: 0 /*не сжиматься никогда*/
+}
+.header-button {
+    height: 100%;
+}
