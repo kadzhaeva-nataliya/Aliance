@@ -1,19 +1,59 @@
 * {
     box-sizing: border-box; /* Ширина и высота элементов считаются пропорционально */
 }
+
+    @font-face {
+        font-family: "Bebas Neue Book";
+         src: url("../fonts/BebasNeueBook.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        }
+
+
 body {
     font-family: "Noto Sans", sans-serif; /*Эта информация из Google-шрифтов, блок CSS rules to specify families*/
 }
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
 .navbar {
-    background-color: #290303; /*временно*/
+    /* background-color: #290303; временно, для понимания, где конец элемента. Эта позиция отключена после момента написания header*/
     display: flex; /* Задаем поведение элемента*/
     align-items: center; /*Выравнивание по центру*/
     color: #fff;
     height: 94px;
+    position: relative; /*такое позиционирование обозначает главенство какого-либо элемента. Блоки c названием 'о компании' и т.п. выходитят вперед относительно затемненного слоя в псевдоклассе before*/
+    border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+}
+.header{
+    min-height: 100vh;
+}
+
+.header-image{
+    background-image: url('../img/header-bg.jpeg');
+    background-size: cover; /*фоновая картинка занимает весь экран*/
+    background-repeat: no-repeat; /*не повторяется*/
+    background-position: center;/* картинка всегда загружается по центру*/
+    position: relative; /*позиция этой картинки для остальных - родительская. Относительно нее строится блок :: before*/
+}
+ /*В блоке .header-image::before мы создаем затемненный прямоугольник, на котором лежит фото background*/
+
+.header-image::before { /*:: псевдоклассы. В нашей разметке нет класса before, но в сss мы задаем для него стиль. Before - псевдокласс */
+    content: "";
+    position: absolute; /*в строках position и top/left задаются стартовые координаты позиционирования */
+    background-color: rgba(41, 45, 51, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* в каком слое лежит элемент. 0-внизу*/
 }
 
 .header-logo {
-    padding: 25px 50px ;
+    padding: 25px 50px;
+    border-right: 1px solid rgba(235, 235, 240, 0.2);
+    height: 100%;/*в % от родителя*/
 }
 .header-nav {
     flex-basis: 100%;
@@ -51,14 +91,67 @@ body {
     font-size: 16px;
     line-height: 160%;
     background: #3A71D1;
-    display: flex;
-    justify-content: center;/*весь контень выравнивается посередине*/
-    align-items: center;
+    display: inline-block;
     padding: 25px 60px;
-    gap: 10px;
     border: none;
-    flex-shrink: 0 /*не сжиматься никогда*/
+    cursor: pointer;
+    
+}
+
+.navbar-button {
+    flex-shrink: 0; /*не сжиматься никогда*/
+    height: 100%;
+
 }
 .header-button {
     height: 100%;
+}
+.sepаrator {
+    background: #5C8EE6;
+    width: 150px;
+    height: 2px;
+}
+.header-content {
+    padding-top: 150px;
+    position: relative; 
+    z-index: 1;
+    color: #fff;
+}
+.header-title {
+    max-width: 1080px;
+    font-family: "Bebas Neue Book";
+    font-size: 80px;
+    line-height: 120%;
+}
+.header-text {
+    max-width: 720px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 50px;
+}
+.header-features {
+    display: flex;
+    min-height: 168px;
+    padding: 0;
+    margin-top: 100px;
+    list-style: none;
+    color: #FFFFFF;
+    position: relative; /*текст в верхнем слое*/
+
+
+}
+.header-features-item {
+
+    padding: 30px 50px;
+    border: 1px solid rgba(235, 235, 240, 0.2);
+}
+.header-features-item:not(:last-child) {/*в конструкции not(:last-child) указываются допюнастройки всех элементов, кроме последнего*/
+    border-right :none; 
+}
+.header-features-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
 }
