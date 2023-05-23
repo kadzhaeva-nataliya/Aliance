@@ -23,8 +23,9 @@ body {
     align-items: center; /*Выравнивание по центру*/
     color: #fff;
     height: 94px;
-    position: relative; /*такое позиционирование обозначает главенство какого-либо элемента. Блоки c названием 'о компании' и т.п. выходитят вперед относительно затемненного слоя в псевдоклассе before*/
+    position: relative; /*relative позиционирование обозначает главенство какого-либо элемента. Блоки c названием 'о компании' и т.п. выходитят вперед относительно затемненного слоя в псевдоклассе before*/
     border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+    width: 100%;
 }
 .header{
     min-height: 100vh;
@@ -154,4 +155,72 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
+}
+.section {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.section-title {
+    font-family: "Bebas Neue Book";
+    font-size: 60px;
+    line-height: 120%;
+    color: #292D33;
+}
+.steps {
+    display: flex; /*элемент ведет себя как блочный*/
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+}
+.steps-item {
+    max-width: 330px;
+}
+.steps-num {
+    font-family: "Bebas Neue Book";
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #5C8EE6;
+    display: flex;
+    align-items: center;
+}
+.steps-num:after {
+    content: "";
+    height: 1px;
+    background: #EBEBF0;
+    width: 100%;
+    margin-left: 30px;
+}
+.steps-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 160%;
+    color: #292D33;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.steps-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #828A99;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.steps-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #5C8EE6;
+}
+.steps-link::before {
+    content: "";
+    height: 1px;
+    background: #5C8EE6;
+    width: 40px;
+    margin-right: 20px;
 }
