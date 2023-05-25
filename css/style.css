@@ -29,11 +29,12 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
-    transition: background-color 0.2s; /*цвет меняется плавно*/
+    transition: background-color 0.2s, height 0.2s; /*цвет меняется плавно*/
 }
 .navbar-light {
    background-color: #fff; 
    color: #292D33;
+   height: 72px;
 }
 .navbar-light .header-logo-path {
     fill: #292D33;
@@ -65,7 +66,9 @@ body {
 }
 
 .header-logo {
-    padding: 25px 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
     height: 100%;/*в % от родителя*/
 }
