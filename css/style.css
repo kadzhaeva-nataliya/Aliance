@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box; /* Ширина и высота элементов считаются пропорционально */
 }
+html {
+    font-size: 16px;
+}
 
     @font-face {
         font-family: "Bebas Neue Book";
@@ -14,7 +17,7 @@ body {
     font-family: "Noto Sans", sans-serif; /*Эта информация из Google-шрифтов, блок CSS rules to specify families*/
 }
 .container {
-    max-width: 1440px;
+    max-width: 90rem;
     margin: auto;
 }
 .navbar {
@@ -22,7 +25,7 @@ body {
     display: flex; /* Задаем поведение элемента*/
     align-items: center; /*Выравнивание по центру*/
     color: #fff;
-    height: 94px;
+    height: 5.875rem;
     position: fixed; /*relative позиционирование обозначает главенство какого-либо элемента. Блоки c названием 'о компании' и т.п. выходитят вперед относительно затемненного слоя в псевдоклассе before*/
     border-bottom: 1px solid rgba(235, 235, 240, 0.2);
     width: 100%;
@@ -31,17 +34,23 @@ body {
     z-index: 2;
     transition: background-color 0.2s, height 0.2s; /*цвет меняется плавно*/
 }
+
+.logo-svg {
+    width: 9rem;
+    height: 2.75rem;
+
+}
 .navbar-light {
    background-color: #fff; 
    color: #292D33;
-   height: 72px;
+   height: 4.5rem;
 }
 .navbar-light .header-logo-path {
     fill: #292D33;
 }
 
 .header{
-    padding-top: 94px;
+    padding-top: 5.875rem;
     min-height: 100vh;
 }
 
@@ -49,7 +58,7 @@ body {
     background-image: url('../img/header-bg.jpeg');
     background-size: cover; /*фоновая картинка занимает весь экран*/
     background-repeat: no-repeat; /*не повторяется*/
-    background-position: center -249px;/* картинка всегда загружается по центру*/
+    background-position: center -15.5625rem;/* картинка всегда загружается по центру*/
     position: relative; /*позиция этой картинки для остальных - родительская. Относительно нее строится блок :: before*/
 }
  /*В блоке .header-image::before мы создаем затемненный прямоугольник, на котором лежит фото background*/
@@ -68,23 +77,28 @@ body {
 .header-logo {
     display: flex;
     align-items: center;
-    padding: 0px 50px;
+    padding: 0px;
+    padding-left:  3.125rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
     height: 100%;/*в % от родителя*/
 }
 .header-nav {
     flex-basis: 100%;
     display: flex;
-    padding: 0 50px;
+    padding: 0 3.125rem;
     list-style: none;
     margin: 0;
 }
 /* Можно писать свойства в экране просмотра страницы в блоке element.style - сразу наглядный результат. Потом скопировать их и вставить сюда. */
 
+.header-nav-item:not(:last-child){
+    margin-right: 3.125rem;
+
+}
 .header-nav-link {
     text-decoration: none;
-    font-size: 16px;
-    margin-right: 50px;
+    font-size: 1rem;
+    
     color: inherit;
 
 }
@@ -93,33 +107,33 @@ body {
     flex-shrink: 0 ; /*Сжатие. 0-не сжимается*/
     display: flex;
     align-items: center;
-    gap: 10px; /*расстояние между символом и номером телефона*/
+    gap: .625rem; /*расстояние между символом и номером телефона*/
     text-decoration: none; /*текст не подчеркнутый*/
-    margin-right: 50px;
+    margin-right: 3.125rem;
 }
 .header-phone-link { /*для ссылок надо прописывать стили отдельно, они из класса не подтягиапются*/
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: inherit /*Inherit - цвет как у родительского элемента*/
 }
 .button {
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     background: #3A71D1;
     display: inline-block;
-    padding: 25px 55px;
+    padding: 1.5625rem 3.4375rem;
     border: none;
     cursor: pointer;
-    max-width: 315px;
+    max-width: 19.6875rem;
     
 }
 
 .navbar-button {
     flex-shrink: 0; /*не сжиматься никогда*/
     height: 100%;
-    padding: 25px 40px;   
+    padding: 1.5625rem 2.5rem;   
 
 }
 .header-button {
@@ -127,44 +141,44 @@ body {
 }
 .sepаrator {
     background: #5C8EE6;
-    width: 150px;
-    height: 2px;
-    padding-bottom: 2px;
-    margin-top: 80px;
+    width: 9.375rem;
+    height: .125rem;
+    padding-bottom: .125rem;
+    margin-top: 5rem;
 }
 .header-content {
-    padding-top: 68px;
-    padding-left: 10px;
-    letter-spacing: 1px;
+    padding-top: 4.25rem;
+    padding-left: .625rem;
+    letter-spacing: .0625rem;
     word-spacing: -4px;
     position: relative; 
     z-index: 1;
     color: #fff;
 }
 .header-title {
-    max-width: 1080px;
+    max-width: 67.5rem;
     font-family: "Bebas Neue Book";
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 120%;
-    margin-top: 26px;
-    margin-bottom: 35px;
+    margin-top: 1.625rem;
+    margin-bottom: 2.1875rem;
 }
 .header-text {
-    max-width: 720px;
+    max-width: 45rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
     letter-spacing: 0.1px;
     word-spacing: -1px;
 }
 .header-features {
     display: flex;
-    min-height: 168px;
+    min-height: 10.5rem;
     padding: 0;
-    margin-top: 102px;
-    margin-left: 5px;
+    margin-top: 6.375rem;
+    margin-left: .3125rem;
     list-style: none;
     color: #FFFFFF;
     position: relative; /*текст в верхнем слое*/
@@ -172,8 +186,8 @@ body {
 
 }
 .header-features-item {
-    width: 287px;
-    padding: 28px 50px;
+    width: 17.9375rem;
+    padding: 1.75rem 3.125rem;
     border: 1px solid rgba(235, 235, 240, 0.2);
 }
 .header-features-item:not(:last-child) {/*в конструкции not(:last-child) указываются допюнастройки всех элементов, кроме последнего*/
@@ -181,38 +195,38 @@ body {
 }
 .header-features-text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
-    margin-top: 19px;
+    margin-top: 1.1875rem;
     margin-bottom: 0;
 }
 .section {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 9.375rem;
+    margin-bottom: 9.375rem;
 }
 
 .section-title {
     font-family: "Bebas Neue Book";
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 120%;
     color: #292D33;
-    margin-top: 25px;
-    margin-left: 10px;
+    margin-top: 1.5625rem;
+    margin-left: .625rem;
 }
 .steps {
     display: flex; /*элемент ведет себя как блочный*/
     list-style: none;
-    padding: 7px;
-    gap: 30px;
+    padding: .4375rem;
+    gap: 1.875rem;
 }
 .steps-item {
-    max-width: 330px;
+    max-width: 20.625rem;
     letter-spacing: 0.1px;
 }
 .steps-num {
     font-family: "Bebas Neue Book";
     font-weight: 400;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 120%;
     color: #5C8EE6;
     display: flex;
@@ -223,37 +237,54 @@ body {
     height: 1px;
     background: #EBEBF0;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 1.875rem;
 }
 .steps-title {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 160%;
     color: #292D33;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 1.875rem;
+    margin-bottom: .625rem;
 }
 .steps-text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #828A99;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: .625rem;
+    margin-bottom: 1.25rem;
 }
 .steps-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #5C8EE6;
 }
 .steps-link::before {
     content: "";
-    height: 1px;
+    height: .0625rem;
     background: #5C8EE6;
-    width: 40px;
-    margin-right: 20px;
+    width: 2.5rem;
+    margin-right: 1.25rem;
 }
+
+@media (max-width: 1600px) {
+    html {
+        font-style: 14px;
+  }  
+    header-image {
+        background-position: center;
+  }
+}
+@media (min-width: 1224px) {
+    html {
+        font-style: 12px;
+      }  
+      header-image {
+         background-position: center;
+      }
+    }
