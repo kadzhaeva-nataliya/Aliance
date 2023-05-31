@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Aliance Production</title>
 </head>
 <body>
@@ -43,25 +45,29 @@
   </ul>
   <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
   <div class="mobile-info">
-    <svg class="phone-icon-address" width="12" height="16">
-      <use href="img/adress.svg"></use>
+    <svg class="phone-icon" width="12" height="16">
+      <use href="img/sprite.svg#geo"></use>
    </svg>
    <address class="mobile-info-address">г. Москва, Холодильный пер. 4к1с8</address>
   </div>
   <!-- /.mobile-info -->
   <div class="mobile-info">
-    <svg class="phone-icon-address" width="12" height="16" >
-      <use href="img/email.svg"></use>
-   </svg>
+    <svg class="phone-icon" width="12" height="17" >
+      <use href="img/sprite.svg#mail"></use>
+    </svg>
    <a href="mailto:a.dragunov@tdaliance.ru" class="mobile-info-email">a.dragunov@tdaliance.ru</a>
   </div>
-  <a href="#" class="mobile-info-icon">
-    <img class="mobile-phone-icon" width="12" height="16" src="img/vk.svg" alt="vk">
-  </a>
-
-  <a href="#" class="mobile-info-icon">
-    <img class="mobile-phone-icon" width="12" height="16" src="img/inst.svg" alt="Иконка i">
-  </a>                  
+  <div class="mobile-info">
+    <svg class="phone-icon" width="12" height="16" >
+      <use href="img/sprite.svg#vk"></use>
+    </svg>
+   <a href="#" class="mobile-info"></a>
+   
+    <svg class="phone-icon" width="16" height="16" >
+      <use href="img/sprite.svg#inst"></use>
+    </svg>
+   <a href="#" class="mobile-info"></a>
+  </div>              
            
 </div>
   <!-- /.mobile-info -->
@@ -116,39 +122,52 @@
         
       </div>
       <!-- /.header-content -->
-      <div class="header-features">
-        <li class="header-features-item">
-          <svg class="logo-svg" width="36" height="36">
-            <use href="img/sprite.svg#time"></use>
-         </svg>
-          <p class="header-features-text">Непрерывная работа c 2017 года</p>
-        </li>
-        <li class="header-features-item">
-          <svg class="logo-svg" width="29" height="29">
-            <use href="img/sprite.svg#sertificate"></use>
-         </svg>
-          <p class="header-features-text">Вся продукция сертифицирована</p>
-        </li>
-        <li class="header-features-item">
-          <svg class="logo-svg" width="25" height="28">
-            <use href="img/sprite.svg#control"></use>
-         </svg>
-          <p class="header-features-text">Контроль качества на всех этапах</p>
-        </li>
-        <li class="header-features-item">
-          <svg class="logo-svg" width="35" height="26">
-            <use href="img/sprite.svg#delivery"></use>
-         </svg>
-          <p class="header-features-text">Возможны поставки по всей России</p>
-        </li>
-        <li class="header-features-item">
-          <svg class="logo-svg" width="32" height="25">
-            <use href="img/sprite.svg#speed"></use>
-         </svg>
-          <p class="header-features-text">Оперативное производство</p>
-        </li>
+
+        <!-- основной блок слайдера -->
+      <div class="swiper">
+      <!-- Обертка слайдера -->
+        <ul class="swiper-wrapper header-features">
+        <!-- слайды -->
+          <li class="swiper-slide header-features-item">
+            <svg width="36" height="36">
+              <use href="img/sprite.svg#time"></use>
+            </svg>
+            <p class="header-features-text">Непрерывная работа c 2017 года</p></li>
+          <li class="swiper-slide header-features-item">
+            <svg width="29" height="29">
+              <use href="img/sprite.svg#sertificate"></use>
+            </svg>
+            <p class="header-features-text">Вся продукция сертифицирована</p></li>
+          <li class="swiper-slide header-features-item">
+            <svg width="25" height="28">
+              <use href="img/sprite.svg#control"></use>
+            </svg>
+            <p class="header-features-text">Контроль качества на всех этапах</p></li>
+          <li class="swiper-slide header-features-item">
+            <svg width="35" height="26">
+              <use href="img/sprite.svg#delivery"></use>
+            </svg>
+            <p class="header-features-text">Возможны поставки по всей России</p></li>
+          <li class="swiper-slide header-features-item">
+            <svg width="32" height="25">
+              <use href="img/sprite.svg#speed"></use>
+            </svg>
+            <p class="header-features-text">Оперативное производство</p></li>
+    ...
+        </ul>
+        
+        <!-- Кнопки навигации вперед/назад -->
+        <div class="slider-buttons">
+          <div class="slider-button-prev"><svg width="36" height="24">
+              <use href="img/sprite.svg#arrow-prev"></use>
+            </svg></div>
+          <div class="slider-button-next"><svg width="36" height="24">
+              <use href="img/sprite.svg#arrow-next"></use>
+            </svg></div>
+        </div>
+        <!-- /.slider-buttons -->
       </div>
-      <!-- /.header-features -->
+
      </div>
      <!-- /.container -->
     </header>
@@ -182,6 +201,7 @@
       </div>
       <!-- /.container -->
     </section>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     
 </body>

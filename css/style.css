@@ -58,8 +58,7 @@ body {
 
 .header{
     padding-top: 5.875rem;
-    min-height: 100vh;
-}
+    }
 
 .header-image{
     background-image: url('../img/header-bg.jpeg');
@@ -193,17 +192,30 @@ body {
     list-style: none;
     color: #FFFFFF;
     position: relative; /*текст в верхнем слое*/
-
-
+    }
+.slider-buttons {
+    display: none;
+    height: 44px;
 }
+.slider-button-prev, 
+.slider-button-next {
+    height: 100%;
+    flex-basis: 50%;
+    border: 1px solid rgba(235, 235, 240, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .header-features-item {
     width: 17.9375rem;
+    min-height: 100%;
     padding: 1.75rem 3.125rem;
     border: 1px solid rgba(235, 235, 240, 0.2);
+
 }
-.header-features-item:not(:last-child) {/*в конструкции not(:last-child) указываются допюнастройки всех элементов, кроме последнего*/
-    border-right :none; 
-}
+
 .header-features-text {
     font-weight: 400;
     font-size: 1rem;
@@ -319,27 +331,28 @@ body {
 @media (max-width: 1200px) {
     html {
         font-size: 12px;
-      }  
+    }  
     .container {
         max-width: 70rem;
     }
     
-      .header-phone {
+    .header-phone {
         display: none;
-      }
-      .header-image {
-      
-      background-position: center;
-      }
-      .navbar {
+    }
+    .header-image {    
+        background-position: center;
+    }
+    .navbar {
         height: 5rem;
-      }
-      .navbar-button {
+    }
+    .navbar-button {
         padding-left: 2rem;
         padding-right: 2rem;
-      }
     }
-    
+    .slider-buttons {
+        display: flex;
+    }
+}  
 @media (max-width: 992px) {
     html {
         font-size: 12px;
@@ -469,7 +482,7 @@ body {
         fill: #5C8EE5; 
     }
     .mobile-phone-icon {
-        display: flex;
+        display: block;
         align-items: flex-start;
         justify-content: space-between;
     }
@@ -481,5 +494,27 @@ body {
     }
     .close-menu .mobile-menu-line:nth-child(3) {
         transform: rotate(-45deg) translateY(-10px); /*развернуть третьего ребенка в псевдоклассе mobile-menu-line (третью линию) под 45*/
+    }
+}
+@media (max-width:760px) {
+    .container {
+        max-width: 40rem;
+    }
+    .header-title {
+        font-size: 4rem;
+    }
+    .header-content {
+        padding-top: 3rem;
+    }
+}
+@media (max-width:576px) {
+    .container {
+        max-width: 90%;
+    }
+    .header-title {
+        font-size: 2rem;
+    }
+    .header-content {
+        padding-top: 2rem;
     }
 }
