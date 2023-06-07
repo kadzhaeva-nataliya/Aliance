@@ -393,11 +393,47 @@ body {
     border: .0625rem solid  #EBEBF0;
     transition: border 0.2s;
     padding: 3.125rem;
+    display: grid; /*задаем своейство карточки, при которой формируются координатные ящейки*/
+    grid-template-columns: 1fr 1fr 1fr; /*можно указывать в пикселях или фракциях (долях от целого*/
+    grid-template-rows: auto 2fr; /*короткая запись если все ячейки однаковые через repeat (2,1fr) */
+    grid-column-gap: 3.125rem; /*отступы между ячейками grid*/
+    grid-template-areas: /*переименование областей*/
+    "logo title title" /*задаем что лежит в каждой ячейке. Если у ячеек одинаковое содержимое, то они объединятся после указания gred-area*/
+    "logo text text"; 
 }
+.trademark-card-logo {
+    width: 100%;
+    height: 100%;
+    fill:#828A99;
+    grid-area: logo;
+}
+.trademark-card-title {
+    grid-area: title;
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 160%;
+    color: #292D33;
+}
+
+.trademark-card-text {
+    grid-area: text;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828A99;
+    margin-top: .625rem;
+}
+
 .trademark-card:hover {
     border-color: #5C8EE5;
 }
-
+.trademark-card:hover .trademark-card-logo {
+    fill:#5C8EE6;
+}
+.trademark-card:hover .trademark-card-title {
+    color:#5C8EE6;
+}
 @media (max-width: 1600px) {
     html {
         font-size: 14px;
@@ -460,6 +496,9 @@ body {
     }
     .card {
         flex-basis: 50%;
+    }
+    .trademark-card {
+        grid-template-columns: auto auto;
     }
 }  
 @media (max-width: 992px) {
@@ -600,6 +639,9 @@ body {
     .close-menu .mobile-menu-line:nth-child(3) {
         transform: rotate(-45deg) translateY(-10px); /*развернуть третьего ребенка в псевдоклассе mobile-menu-line (третью линию) под 45*/
     }
+    .trademark-cards {
+        flex-direction: column;
+    }
 }
 @media (max-width:768px) {
     .container {
@@ -624,5 +666,10 @@ body {
     }
     .header-content {
         padding-top: 2rem;
+    }
+    .trademark-card {
+        grid-template-areas: 
+        "logo title"
+        "text text";
     }
 }
