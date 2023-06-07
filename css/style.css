@@ -92,11 +92,19 @@ body {
 .header-nav {
     flex-basis: 100%;
     display: flex;
+    align-items: center;
+    height: 100%;
     padding: 0 3.125rem;
     list-style: none;
     margin: 0;
 }
 /* Можно писать свойства в экране просмотра страницы в блоке element.style - сразу наглядный результат. Потом скопировать их и вставить сюда. */
+
+.header-nav-item{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
 .header-nav-item:not(:last-child){
     margin-right: 3.125rem;
@@ -105,9 +113,28 @@ body {
 .header-nav-link {
     text-decoration: none;
     font-size: 1rem;
-    
+    display: flex;
+    align-items: center;
+    height: 100%;
     color: inherit;
+    position: relative;
+}   
+.header-nav-link:after { /*эффект после наведения*/
+    content: "";
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    background-color: #5C8EE6;
+    transition: width 0.2s; /*плавность*/
+    right: 0;
+    left: auto;
+}
 
+.header-nav-link:hover::after { /*эффект при наведении*/
+    width: 100%;
+    right: auto;
+    left: 0; /*подчеркивание появляется слева, а прпадает в право*/
 }
 
 .header-phone {
@@ -292,8 +319,11 @@ body {
     background: #5C8EE6;
     width: 2.5rem;
     margin-right: 1.25rem;
+    transition: width 0.2s;
 }
-
+.steps-link:hover:before { /*при наведении на элемент before меняется ширина полоски*/
+    width: 3.75rem;
+}
 .steps-buttons {
     display: none;
     height: 40px;
@@ -308,6 +338,64 @@ body {
     height: 100%;
     width: 60px;
     cursor: pointer;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap; /*переносить на другую строку*/
+}
+.card {
+    text-decoration: none;
+    flex-basis: 33%; /*размер карточки*/
+    border: .0625rem solid  #EBEBF0;
+    position: relative;
+    transition: border 0.2s;
+}
+.card:hover .card-title { /*При наведении на заголовок*/
+    color: #5C8EE5;   
+}
+
+.card:hover {
+    border-color: #5C8EE5;
+}
+
+.card-image {
+    width: 100%; /*картинки не выпадают за пределы родителя*/
+    position: absolute;/*выравнивание относительно свойства родителя position: relative*/
+    bottom: 0;/*карточка всегда прижата к нижу и углам и при переполнении текстом удлиняется*/
+    left: 0;
+    right: 0;
+    z-index: 0; /*текст всегда перекрывает карточку. Чем выше индекс, тем выше статус свойства*/
+}
+.card-content {
+    padding: 2.5rem 3.125rem;
+}
+.card-title {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 140%; /*межстрочный интервал*/
+    color: #292D33;
+    margin-top: 0;
+    margin-bottom: .625rem;
+    transition: color 0.2s;
+}
+.card-text {
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828A99;
+    margin-bottom: 24.625rem;
+}
+.trademark-cards {
+    display: flex;
+}
+.trademark-card {
+    flex-basis: 50%;
+    text-decoration: none;
+    border: .0625rem solid  #EBEBF0;
+    transition: border 0.2s;
+    padding: 3.125rem;
+}
+.trademark-card:hover {
+    border-color: #5C8EE5;
 }
 
 @media (max-width: 1600px) {
@@ -370,6 +458,9 @@ body {
     .steps-buttons {
         display: flex;
     }
+    .card {
+        flex-basis: 50%;
+    }
 }  
 @media (max-width: 992px) {
     html {
@@ -417,8 +508,7 @@ body {
         display: block;
         fill: #ffffff;
     }
-    .mobile-menu {
-        
+    .mobile-menu {       
         position: fixed;
         top: 0;
         right: 0;
@@ -432,8 +522,6 @@ body {
         padding-top: 5rem;
         padding-left: 1.5rem;
         padding-right: .9375rem;
-        
-
     }    
     .mobile-menu.is-open {
         display: block;
@@ -448,7 +536,6 @@ body {
     } 
     .mobile-menu-link {  
         text-decoration: none; 
-
         font-weight: 700;
         font-size: 14px;
         line-height: 160%;
@@ -514,7 +601,7 @@ body {
         transform: rotate(-45deg) translateY(-10px); /*развернуть третьего ребенка в псевдоклассе mobile-menu-line (третью линию) под 45*/
     }
 }
-@media (max-width:760px) {
+@media (max-width:768px) {
     .container {
         max-width: 40rem;
     }
@@ -523,6 +610,9 @@ body {
     }
     .header-content {
         padding-top: 3rem;
+    }
+    .card {
+        flex-basis: 100%;
     }
 }
 @media (max-width:576px) {
