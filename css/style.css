@@ -494,11 +494,17 @@ body {
 
 .clients-logo-item {
     display: flex;
+    min-height: 10rem;
     justify-content: center;
     align-items: center;
     flex-basis: 33%;
     border: 1px solid #EBEBF0;
     padding: 1rem;
+    filter: grayscale(100%); /*фильтр показывает, насколько серая иконка*/
+    transition: filter 0.2s;
+}
+.clients-logo-item:hover {
+    filter: grayscale(0%);
 }
 .clients-logo {
     max-width: 100%;
