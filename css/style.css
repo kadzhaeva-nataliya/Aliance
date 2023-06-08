@@ -2,7 +2,7 @@
     box-sizing: border-box; /* Ширина и высота элементов считаются пропорционально */
 }
 html {
-    font-size: 1rem;
+    font-size: 16px;
 }
 
     @font-face {
@@ -20,7 +20,7 @@ body {
     display: none;
 }
 .container {
-    max-width: 1440px;
+    max-width: 90rem;
     margin: auto;
 }
 .navbar {
@@ -28,9 +28,9 @@ body {
     display: flex; /* Задаем поведение элемента*/
     align-items: center; /*Выравнивание по центру*/
     color: #fff;
-    height: 94px;
+    height: 5.875rem;
     position: fixed; /*relative позиционирование обозначает главенство какого-либо элемента. Блоки c названием 'о компании' и т.п. выходитят вперед относительно затемненного слоя в псевдоклассе before*/
-    border-bottom: .0625rem solid rgba(235, 235, 240, 0.2);
+    border-bottom: 1px solid rgba(235, 235, 240, 0.2);
     width: 100%;
     top: 0;
     left: 0;
@@ -39,14 +39,14 @@ body {
 }
 
 .logo-svg {
-    width: 144px;
-    height: 44px;
+    width: 9rem;
+    height: 2.75rem;
 
 }
 .navbar-light {
    background-color: #fff; 
    color: #292D33;
-   height: 72px;
+   height: 4.5rem;
 }
 .phone-icon {
     fill: #5C8EE6;
@@ -57,14 +57,14 @@ body {
 }
 
 .header{
-    padding-top: 94px;
+    padding-top: 5.875rem;
     }
 
 .header-image{
     background-image: url('../img/header-bg.jpeg');
     background-size: cover; /*фоновая картинка занимает весь экран*/
     background-repeat: no-repeat; /*не повторяется*/
-    background-position: center -249px;/* картинка всегда загружается по центру*/
+    background-position: center -15.5625rem;/* картинка всегда загружается по центру*/
     position: relative; /*позиция этой картинки для остальных - родительская. Относительно нее строится блок :: before*/
 }
  /*В блоке .header-image::before мы создаем затемненный прямоугольник, на котором лежит фото background*/
@@ -83,10 +83,10 @@ body {
 .header-logo {
     display: flex;
     align-items: center;
-    padding: 0rem;
-    padding-left:  25px;
-    padding-right: 25px;
-    border-right: .0625rem solid rgba(235, 235, 240, 0.2);
+    padding: 0px;
+    padding-left:  1.5625rem;
+    padding-right: 1.5625rem;
+    border-right: 1px solid rgba(235, 235, 240, 0.2);
     height: 100%;/*в % от родителя*/
 }
 .header-nav {
@@ -94,7 +94,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 50px;
+    padding: 0 3.125rem;
     list-style: none;
     margin: 0;
 }
@@ -107,12 +107,12 @@ body {
 }
 
 .header-nav-item:not(:last-child){
-    margin-right: 50px;
+    margin-right: 3.125rem;
 
 }
 .header-nav-link {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     height: 100%;
@@ -121,10 +121,10 @@ body {
 }   
 .header-nav-link:after { /*эффект после наведения*/
     content: "";
-    width: 0rem;
-    height: .125rem;
+    width: 0px;
+    height: 2px;
     position: absolute;
-    bottom: -0.0625rem;
+    bottom: -1px;
     background-color: #5C8EE6;
     transition: width 0.2s; /*плавность*/
     right: 0;
@@ -141,33 +141,33 @@ body {
     flex-shrink: 0 ; /*Сжатие. 0-не сжимается*/
     display: flex;
     align-items: center;
-    gap: 10px; /*расстояние между символом и номером телефона*/
+    gap: .625rem; /*расстояние между символом и номером телефона*/
     text-decoration: none; /*текст не подчеркнутый*/
-    margin-right: 50px;
+    margin-right: 3.125rem;
 }
 .header-phone-link { /*для ссылок надо прописывать стили отдельно, они из класса не подтягиапются*/
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: inherit /*Inherit - цвет как у родительского элемента*/
 }
 .button {
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     background: #3A71D1;
     display: inline-block;
-    padding: 25px 55px;
+    padding: 1.5625rem 3.4375rem;
     border: none;
     cursor: pointer;
-    max-width: 315px;
+    max-width: 19.6875rem;
     
 }
 
 .navbar-button {
     flex-shrink: 0; /*не сжиматься никогда*/
     height: 100%;
-    padding: 25px 40px;   
+    padding: 1.5625rem 2.5rem;   
 
 }
 .navbar-button .button-icon {
@@ -178,56 +178,56 @@ body {
 }
 .sepаrator {
     background: #5C8EE6;
-    width: 150px;
-    height: 2px;
-    padding-bottom: 2px;
-    margin-top: 80px;
+    width: 9.375rem;
+    height: .125rem;
+    padding-bottom: .125rem;
+    margin-top: 5rem;
 }
 .header-content {
-    padding-top: 68px;
-    padding-left: 10px;
-    letter-spacing: 1px;
-    word-spacing: -0.25rem;
+    padding-top: 4.25rem;
+    padding-left: .625rem;
+    letter-spacing: .0625rem;
+    word-spacing: -4px;
     position: relative; 
     z-index: 1;
     color: #fff;
 }
 .header-title {
-    max-width: 1080px;
+    max-width: 67.5rem;
     font-family: "Bebas Neue Book";
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 120%;
-    margin-top: 26px;
-    margin-bottom: 35px;
+    margin-top: 1.625rem;
+    margin-bottom: 2.1875rem;
 }
 .header-text {
-    max-width: 720px;
+    max-width: 45rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
-    margin-bottom: 50px;
-    letter-spacing: .0063rem;
-    word-spacing: -0.0625rem;
+    margin-bottom: 3.125rem;
+    letter-spacing: .1008px;
+    word-spacing: -1px;
 }
 .header-features {
     display: flex;
-    min-height: 168px;
+    min-height: 10.5rem;
     padding: 0;
-    margin-top: 102px;
+    margin-top: 6.375rem;
     list-style: none;
     color: #FFFFFF;
     position: relative; /*текст в верхнем слое*/
     }
 .slider-buttons {
     display: none;
-    height: 2.75rem;
+    height: 44px;
 }
 .slider-button-prev, 
 .slider-button-next {
     height: 100%;
     flex-basis: 50%;
-    border: .0625rem solid rgba(235, 235, 240, 0.2);
+    border: 1px solid rgba(235, 235, 240, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,47 +235,47 @@ body {
 }
 
 .header-features-item {
-    width: 287px;
+    width: 17.9375rem;
     min-height: 100%;
-    padding: 28px 50px;
-    border: .0625rem solid rgba(235, 235, 240, 0.2);
+    padding: 1.75rem 3.125rem;
+    border: 1px solid rgba(235, 235, 240, 0.2);
 
 }
 
 .header-features-text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
-    margin-top: 19px;
+    margin-top: 1.1875rem;
     margin-bottom: 0;
 }
 .section {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 9.375rem;
+    margin-bottom: 9.375rem;
 }
 
 .section-title {
     font-family: "Bebas Neue Book";
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 120%;
     color: #292D33;
-    margin-top: 25px;
-    margin-left: 10px;
+    margin-top: 1.5625rem;
+    margin-left: .625rem;
 }
 .steps {
     display: flex; /*элемент ведет себя как блочный*/
     list-style: none;
-    padding: 7px;
-    gap: 30px;
+    padding: .4375rem;
+    gap: 1.875rem;
 }
 .steps-item {
-    max-width: 330px;
-    letter-spacing: .0063rem;
+    max-width: 20.625rem;
+    letter-spacing: .1008px;
 }
 .steps-num {
     font-family: "Bebas Neue Book";
     font-weight: 400;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 120%;
     color: #5C8EE6;
     display: flex;
@@ -283,60 +283,64 @@ body {
 }
 .steps-num:after {
     content: "";
-    height: .0625rem;
+    height: 1px;
     background: #EBEBF0;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 1.875rem;
 }
 .steps-title {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 160%;
     color: #292D33;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 1.875rem;
+    margin-bottom: .625rem;
 }
 .steps-text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #828A99;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: .625rem;
+    margin-bottom: 1.25rem;
 }
 .button-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #5C8EE6;
 }
 .button-link::before {
     content: "";
-    height: 1px;
+    height: .0625rem;
     background: #5C8EE6;
-    width: 40px;
-    margin-right: 20px;
+    width: 2.5rem;
+    margin-right: 1.25rem;
     transition: width 0.2s;
 }
 .button-link:hover:before { /*при наведении на элемент before меняется ширина полоски*/
-    width: 60px;
+    width: 3.75rem;
+}
+
+.primery-buttons-wrapper {
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
 }
 .steps-buttons {
     display: none;
-    height: 2.5rem;
-    justify-content: flex-end;
     }
-
-.steps-button-prev, .steps-button-next {
+.primery-button-prev, /*заданы два класса для кнопок-steps-button-prev для JS, а этот - для оформления стилей*/
+.primery-button-next {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #5C8EE5; 
     height: 100%;
-    width: 3.75rem;
+    width: 5rem;
     cursor: pointer;
 }
 .cards {
@@ -346,7 +350,7 @@ body {
 .card {
     text-decoration: none;
     flex-basis: 33%; /*размер карточки*/
-    border: 1px solid  #EBEBF0;
+    border: .0625rem solid  #EBEBF0;
     position: relative;
     transition: border 0.2s;
 }
@@ -367,22 +371,22 @@ body {
     z-index: 0; /*текст всегда перекрывает карточку. Чем выше индекс, тем выше статус свойства*/
 }
 .card-content {
-    padding: 40px 50px;
+    padding: 2.5rem 3.125rem;
 }
 .card-title {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 140%; /*межстрочный интервал*/
     color: #292D33;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
     transition: color 0.2s;
 }
 .card-text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #828A99;
-    margin-bottom: 394px;
+    margin-bottom: 24.625rem;
 }
 .trademark-cards {
     display: flex;
@@ -390,13 +394,13 @@ body {
 .trademark-card {
     flex-basis: 50%;
     text-decoration: none;
-    border: 1px solid  #EBEBF0;
+    border: .0625rem solid  #EBEBF0;
     transition: border 0.2s;
-    padding: 50px;
+    padding: 3.125rem;
     display: grid; /*задаем своейство карточки, при которой формируются координатные ящейки*/
     grid-template-columns: 1fr 1fr 1fr; /*можно указывать в пикселях или фракциях (долях от целого*/
     grid-template-rows: auto 2fr; /*короткая запись если все ячейки однаковые через repeat (2,1fr) */
-    grid-column-gap: 50px; /*отступы между ячейками grid*/
+    grid-column-gap: 3.125rem; /*отступы между ячейками grid*/
     grid-template-areas: /*переименование областей*/
     "logo title title" /*задаем что лежит в каждой ячейке. Если у ячеек одинаковое содержимое, то они объединятся после указания gred-area*/
     "logo text text"; 
@@ -411,7 +415,7 @@ body {
     grid-area: title;
     font-weight: 400;
     margin: 0;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 160%;
     color: #292D33;
 }
@@ -419,10 +423,10 @@ body {
 .trademark-card-text {
     grid-area: text;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #828A99;
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .trademark-card:hover {
@@ -435,11 +439,11 @@ body {
     color:#5C8EE6;
 }
 .section-founder {
-    min-height: 660px;
+    min-height: 41.25rem;
     position: relative;
-    /* margin-left: 50px; */
-    margin-top: 150px;
-    margin-bottom: 150px;
+    /* margin-left: 3.125rem; */
+    margin-top: 9.375rem;
+    margin-bottom: 9.375rem;
 }
 .founder-foto {
     position: absolute;
@@ -450,7 +454,7 @@ body {
     object-fit: cover; /*Не деформируется картинка*/
 }
 .founder-content {
-    max-width: 720px;
+    max-width: 45rem;
 }
 .founder-content-wrapper {
     display: flex;
@@ -460,14 +464,14 @@ body {
 .founder-text {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #828A99;
 }
 .clients-wrapper {
     display: flex;
-    gap: 3.125rem;
-    margin-bottom: 150px;
+    gap: 50px;
+    margin-bottom: 9.375rem;
 }
 .clients-content {
     flex-basis: 50%;
@@ -480,9 +484,9 @@ body {
 .clients-list-item {
     display: flex; /*как только собирается располагать элементы блоками - сразу display:flex*/
     align-items: center; /*по вторичной оси выравниваем по центру*/
-    gap: 20px;
+    gap: 1.25rem;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 160%;
     color: #292D33;
 }
@@ -494,12 +498,12 @@ body {
 
 .clients-logo-item {
     display: flex;
-    min-height: 10rem;
+    min-height: 160px;
     justify-content: center;
     align-items: center;
     flex-basis: 33%;
-    border: 1px solid #EBEBF0;
-    padding: 1rem;
+    border: .0625rem solid #EBEBF0;
+    padding: 16px;
     filter: grayscale(100%); /*фильтр показывает, насколько серая иконка*/
     transition: filter 0.2s;
 }
@@ -508,48 +512,102 @@ body {
 }
 .clients-logo {
     max-width: 100%;
-    width: 4.375rem;
-    height: 4.375rem;
+    width: 70px;
+    height: 70px;
 }
-@media (max-width: 1600px) {
+
+.blog-card {
+    display: flex;
+    position: relative;
+    min-height: 400px;
+    flex-direction: column;
+    text-decoration: none;
+    color:#fff;
+    justify-content: flex-end;
+    padding: 50px;
+}
+.blog-card::before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background:rgba(41, 45, 51, 0.7);
+    z-index: -1;
+}
+.blog-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /*картинка нижним слоем*/
+}
+.blog-card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 160%;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.blog-card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF;
+    margin: 0;
+}
+.blog-slider-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
+    margin-bottom: 9.375rem;
+}
+@media (max-width: 100rem) {
     html {
-        font-size: .875rem;
+        font-size: 14px;
   }  
     .header-image {
         background-position: center;
   }
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 91.25rem) {
     html {
-        font-size: .8125rem;
+        font-size: 13px;
   }  
     header-image {
         background-position: center;
   }
     .header-logo {
-        padding: 32px;
+        padding: 2rem;
     }
     .logo-svg {
-        max-width: 96px;
+        max-width: 6rem;
     }
     .header-nav {
-        padding-left: 32px;
+        padding-left: 2rem;
     }
     .header-nav-item:not(:last-child) {
-        margin-right: 16px;
+        margin-right: 1rem;
     }
     .header-phone {
-        margin-right: 32px;
+        margin-right: 2rem;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 75rem) {
     html {
-        font-size: .75rem;
+        font-size: 12px;
     }  
     .container {
-        max-width: 1120px;
+        max-width: 70rem;
     }
     
     .header-phone {
@@ -559,15 +617,23 @@ body {
         background-position: center;
     }
     .navbar {
-        height: 80px;
+        height: 5rem;
     }
     .navbar-button {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .slider-buttons {
         display: flex;
     }
+    .primery-buttons-wrapper {
+        height: 2.5rem;
+    }
+    .primery-button-prev,
+    .primery-button-next {
+        width: 3.75rem;
+    }
+
     .steps-buttons {
         display: flex;
     }
@@ -578,16 +644,16 @@ body {
         grid-template-columns: auto auto;
     }
     .founder-content {
-        max-width: 560px;
+        max-width: 35rem;
     }
 }  
 
-@media (max-width: 992px) {
+@media (max-width: 62rem) {
     html {
-        font-size: .75rem;
+        font-size: 12px;
       }  
       .container {
-        max-width: 960px;
+        max-width: 60rem;
     }
       .header-nav {
         display: none;
@@ -598,13 +664,13 @@ body {
     }      
     
     .mobile-menu-toggle {
-        width: 5rem; 
+        width: 80px; 
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 28.8px;
-        border-right: .0625rem solid rgba(235, 235, 240, 0.2);
+        padding: 1.8rem;
+        border-right: 1px solid rgba(235, 235, 240, 0.2);
 
     }
     .navbar-light .mobile-menu-line {
@@ -612,7 +678,7 @@ body {
     }
 
     .mobile-menu-line {
-        height: .0625rem;
+        height: 1px;
         background-color: #fff;
         width: 100%;
         transition: transform 0.2s; /*плавность переключения 3х линий в крест*/
@@ -639,9 +705,9 @@ body {
         overflow-y: auto;
         z-index: 2;
         background-color: #fff;
-        padding-top: 80px;
-        padding-left: 24px;
-        padding-right: 15px;
+        padding-top: 5rem;
+        padding-left: 1.5rem;
+        padding-right: .9375rem;
     }    
     .mobile-menu.is-open {
         display: block;
@@ -652,12 +718,12 @@ body {
         padding: 0;
     } 
     .mobile-menu-nav-item {
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
     } 
     .mobile-menu-link {  
         text-decoration: none; 
         font-weight: 700;
-        font-size: .875rem;
+        font-size: 14px;
         line-height: 160%;
         color: #292D33;
 
@@ -665,13 +731,13 @@ body {
     .mobile-submenu {
         list-style: none;
         padding: 0;
-        padding-left: 16px;
+        padding-left: 1rem;
         font-weight: 400;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
     .mobile-submenu-link {
         text-decoration: none;
-        font-size: 14px;
+        font-size: .875rem;
         line-height: 160%;
         color: #828A99;
     
@@ -679,26 +745,26 @@ body {
     .mobile-phone {
         display: block;
         font-weight: 600;
-        font-size: 1.25rem;
+        font-size: 20px;
         line-height: 160%;
         text-decoration-line: underline;
         color: #292D33;
-        border-top: .0625rem solid #EBEBF0;
-        padding-top: 30px;
-        margin-bottom: 24px;
+        border-top: 1px solid #EBEBF0;
+        padding-top: 1.875rem;
+        margin-bottom: 1.5rem;
     }
     .mobile-info {
        display: flex;
        align-items:center;
-       gap: 16px;
-       margin-bottom: 16px;
+       gap: 1rem;
+       margin-bottom: 1rem;
     }
     .mobile-info-address, 
     .mobile-info-email {
         text-decoration: none;
         font-style: normal;
         font-weight: 400;
-        font-size: .875rem;
+        font-size: 14px;
         line-height: 160%;
         color: #292D33;
 
@@ -715,10 +781,10 @@ body {
         display: none;
     }
     .close-menu .mobile-menu-line:nth-child(1) {
-        transform: rotate(45deg) translateY(.625rem); /*развернуть первого ребенка в псевдоклассе mobile-menu-line (первую линию) под 45*/
+        transform: rotate(45deg) translateY(10px); /*развернуть первого ребенка в псевдоклассе mobile-menu-line (первую линию) под 45*/
     }
     .close-menu .mobile-menu-line:nth-child(3) {
-        transform: rotate(-45deg) translateY(-0.625rem); /*развернуть третьего ребенка в псевдоклассе mobile-menu-line (третью линию) под 45*/
+        transform: rotate(-45deg) translateY(-10px); /*развернуть третьего ребенка в псевдоклассе mobile-menu-line (третью линию) под 45*/
     }
     .trademark-cards {
         flex-direction: column;
@@ -730,15 +796,15 @@ body {
         flex-direction: column;
     }
 }
-@media (max-width:768px) {
+@media (max-width:48rem) {
     .container {
-        max-width: 640px;
+        max-width: 40rem;
     }
     .header-title {
-        font-size: 64px;
+        font-size: 4rem;
     }
     .header-content {
-        padding-top: 48px;
+        padding-top: 3rem;
     }
     .card {
         flex-basis: 100%;
@@ -746,18 +812,18 @@ body {
     .founder-foto {
         position: relative;
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 3.125rem;
     }
 }
-@media (max-width:576px) {
+@media (max-width:36rem) {
     .container {
         max-width: 90%;
     }
     .header-title {
-        font-size: 32px;
+        font-size: 2rem;
     }
     .header-content {
-        padding-top: 32px;
+        padding-top: 2rem;
     }
     .trademark-card {
         grid-template-areas: 
