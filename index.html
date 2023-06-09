@@ -446,7 +446,57 @@
       <!-- /.container -->
     </section>
     <!-- /.section-blog -->
-
+    <section class="cta"> <!-- cta-скоращенное от call to action -->
+      <div class="bg-gray section-cta"> <!-- серый дальний план -->
+        <img src="img/cta.png" alt="call to action" class="cta-image">
+        <div class="cta-form-wrapper container">
+          <!-- В классе container были заланы отступы ранее -->
+          <form action="#" class="cta-form">
+            <!-- тег form используется для создания форм, с помощью которых человека можно перенаправлять на другие ресурсы. Куда пеенаправляют - пишут в разделе action-->
+            <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2> 
+            <!-- Класс section-title уже создан, для него есть настройки, а cta-form-title для возможных доп.настроек сta/  -->
+            <p class="cta-form-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
+            <div class="input-group-wrapper">
+              <!-- Обертка для поля имя и телефон usera. Это родительская форма, в кот.задаются флексовые настройки для того, чтобы элементы располагались рядом -->
+              <div class="input-group">
+                <input 
+                id="user-name" 
+                type="text" 
+                class="input" 
+                plaseholder=" "/>
+                <label class="input-group-label" for="user-name">Имя</label>
+                <!-- label-подсказка, что имнно писать в текстовом поле -->
+              </div>
+              <!-- /.input-group -->
+              <div class="input-group">
+                <input 
+                id="user-phone"
+                type="tel" 
+                class="input"
+                plaseholder=" "/>
+                <label class="input-group-label" for="user-phone">Номер телефона</label>
+              </div>
+              <!-- /.input-group -->
+            </div>
+            <!-- /.input-group-wrapper -->
+            <div class="cta-form-footer">
+              <button type="submit" class="button cta-form-button">Отправить заявку</button> 
+              <div class="notify">
+                <svg class="notify-icon" width="14" height="14">
+                  <use href="img/sprite.svg#shield"></use>
+                </svg>
+                <p class="notify-text">Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную конфиденциальность информации!
+                </p>
+                
+              </div>
+              <!-- type submit отзначает, что эта кнопка отправляет информацию -->
+            </div>
+            <!-- /.cta-form-footer -->
+          </form>
+        </div>
+        <!-- /.cta-form-wrapper -->
+      </div>
+    </section>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     
