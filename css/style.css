@@ -608,6 +608,10 @@ body {
     display: flex;
     gap: 1.875rem;
 }
+.input-group-vertical {
+    display: flex;
+    flex-direction: column;
+}
 .input-group {
     position: relative;
     height: 4.125rem;
@@ -623,7 +627,7 @@ body {
     left: 0;
     padding: 1.25rem 1.875rem;
     border: 1px solid #E4E4EB;
-    background-color: transparent;
+    background-color: inherit;
 }
 .input-group-label {
     position: absolute; /*элемент всегда выходит на передний план*/
@@ -799,11 +803,15 @@ body {
     background-color: rgba(41, 45, 51, 0.5);
     z-index: 10;
     display: flex;
+    transition: opacity 0.2s;
  }
 .modal.is-open {
     transform: translateX(0);
     visibility: visible;
     opacity: 1;
+}
+.modal.is-open .modal-dialog {
+    transform: translateY(0);
 }
 .modal-dialog {
     margin: auto;
@@ -811,6 +819,8 @@ body {
     padding: 2.5rem 3.125rem;
     background-color: #fff;
     position: relative;
+    transform: translateY(-10%);/*модальное окно появляется сверху*/
+    transition: transform 0.3s, opasity 0.3s;
 }
 .modal-close {
     display: flex;
@@ -839,6 +849,18 @@ body {
     font-size: 1rem;
     line-height: 160%;
     color: #828A99;
+    margin-bottom: 1.875rem;
+}
+.modal-input-group {
+    background-color: #fff;
+}
+.modal-form-footer {
+    margin-top: 1.875rem;
+}
+.modal-form-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 @media (max-width: 1600px) {
     html {

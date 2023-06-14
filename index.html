@@ -98,7 +98,7 @@
         </a>
       </div>
       <!-- /.header-phone -->
-      <button class="navbar-button button">
+      <button class="navbar-button button" data-toggle="modal">
         <svg class="button-icon" width="24" height="24">
           <use href="img/sprite.svg#Phone"></use>
         </svg>
@@ -607,31 +607,31 @@
         <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!
         </p>
         <form action="#" class="modal-form">
-          <div class="input-group-wrapper">
+          <div class="input-group-wrapper input-group-vertical">
             <!-- Обертка для поля имя и телефон usera. Это родительская форма, в кот.задаются флексовые настройки для того, чтобы элементы располагались рядом -->
-            <div class="input-group">
+            <div class="input-group modal-input-group">
               <input 
-              id="user-name" 
+              id="modal-user-name" 
               type="text" 
-              class="input" 
+              class="input modal-input" 
               placeholder=" "/>
-              <label class="input-group-label" for="user-name">Имя</label>
+              <label class="input-group-label modal-input-label" for="user-name">Имя</label>
               <!-- label-подсказка, что имнно писать в текстовом поле -->
             </div>
             <!-- /.input-group -->
-            <div class="input-group">
+            <div class="input-group modal-input-group">
               <input 
-              id="user-phone"
+              id="modal-user-phone"
               type="tel" 
-              class="input"
+              class="input modal-input"
               placeholder=" "/>
-              <label class="input-group-label" for="user-phone">Номер телефона</label>
+              <label class="input-group-label modal-input-label" for="modal-user-phone">Номер телефона</label>
             </div>
             <!-- /.input-group -->
           </div>
           <!-- /.input-group-wrapper -->
-          <div class="cta-form-footer">
-            <button type="submit" class="button cta-form-button">Отправить заявку</button> 
+          <div class="modal-form-footer">
+            <button type="submit" class="button modal-form-button">Отправить заявку</button> 
             <div class="notify">
               <svg class="notify-icon" width="14" height="14">
                 <use href="img/sprite.svg#shield"></use>
@@ -642,7 +642,7 @@
             </div>
             <!-- type submit отзначает, что эта кнопка отправляет информацию -->
           </div>
-          <!-- /.cta-form-footer -->
+          <!-- /.modal-form-footer -->
         </form>
         <!-- /.modal-form -->
       </div>
