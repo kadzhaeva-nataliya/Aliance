@@ -122,7 +122,7 @@ body {
 .header-nav-link:after { /*эффект после наведения*/
     content: "";
     width: 0px;
-    height: 2px;
+    height: .125rem;
     position: absolute;
     bottom: -1px;
     background-color: #5C8EE6;
@@ -187,7 +187,7 @@ body {
     padding-top: 4.25rem;
     padding-left: .625rem;
     letter-spacing: .0625rem;
-    word-spacing: -4px;
+    word-spacing: -0.25rem;
     position: relative; 
     z-index: 1;
     color: #fff;
@@ -207,8 +207,8 @@ body {
     font-size: 1rem;
     line-height: 160%;
     margin-bottom: 3.125rem;
-    letter-spacing: .1008px;
-    word-spacing: -1px;
+    letter-spacing: .0063rem;
+    word-spacing: -0.0625rem;
 }
 .header-features {
     display: flex;
@@ -221,7 +221,7 @@ body {
     }
 .slider-buttons {
     display: none;
-    height: 44px;
+    height: 2.75rem;
 }
 .slider-button-prev, 
 .slider-button-next {
@@ -270,7 +270,7 @@ body {
 }
 .steps-item {
     max-width: 20.625rem;
-    letter-spacing: .1008px;
+    letter-spacing: .0063rem;
 }
 .steps-num {
     font-family: "Bebas Neue Book";
@@ -327,7 +327,7 @@ body {
 
 .primery-buttons-wrapper {
     display: flex;
-    height: 60px;
+    height: 3.75rem;
     justify-content: flex-end;
 }
 .steps-buttons {
@@ -470,7 +470,7 @@ body {
 }
 .clients-wrapper {
     display: flex;
-    gap: 50px;
+    gap: 3.125rem;
     margin-bottom: 9.375rem;
 }
 .clients-content {
@@ -498,12 +498,12 @@ body {
 
 .clients-logo-item {
     display: flex;
-    min-height: 160px;
+    min-height: 10rem;
     justify-content: center;
     align-items: center;
     flex-basis: 33%;
     border: .0625rem solid #EBEBF0;
-    padding: 16px;
+    padding: 1rem;
     filter: grayscale(100%); /*фильтр показывает, насколько серая иконка*/
     transition: filter 0.2s;
 }
@@ -512,8 +512,8 @@ body {
 }
 .clients-logo {
     max-width: 100%;
-    width: 70px;
-    height: 70px;
+    width: 4.375rem;
+    height: 4.375rem;
 }
 
 .blog-card {
@@ -675,7 +675,172 @@ body {
     line-height: 160%;
     color: #828A99;
 }
-@media (max-width: 100rem) {
+.footer-top {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.footer-logo {
+    width: 12.5rem;
+    height: 3.75rem;
+}
+.footer-info {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-style: normal;
+    color: #292D33;
+    gap: .625rem;
+}
+.footer-info-address,
+.footer-info-email {
+    font-style: inherit;
+    text-decoration: inherit;
+    color: inherit
+}
+.footer-phone {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 160%;
+    text-decoration-line: underline;
+    color: #292D33;
+}
+.footer-social-link {
+    text-decoration: none;
+}
+.footer-seporator {
+    background-color: #EBEBF0;
+    opacity: 0.5;
+}
+.footer-bottom {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    display: flex;
+
+}
+.footer-menu-title {
+    margin-top: 0;
+    margin-bottom: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #292D33;
+}
+.footer-menu-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style-type: none; /*нет точек в начале списка*/
+    
+}
+.footer-menu-column-2 {
+    columns: 20rem auto;
+    min-width: 45rem;
+}
+.footer-menu-link {
+    text-decoration: none;
+    color: #828A99;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    margin-bottom: .9375rem; /*эти два пункта задают расстояние между ссылками*/
+    display: block;
+}
+.footer-menu-link-bold {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #292D33;
+    margin-bottom: 1.875rem;
+}
+.footer-bottom {
+    display: flex;
+}
+.footer-menu-wrapper:last-child {
+    margin-left: 11.6875rem;
+}
+.footer-wrapper {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4.375rem;
+    color: #828A99;
+
+}
+.footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4.375rem;
+}
+.footer-copyright,
+.footer-policy {
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 160%;
+    color: #828A99;
+    
+}
+.modal {
+    opacity: 0;
+    visibility: hidden; /*по умолчанию скрыто*/
+    transform: translateX (-100%);/*модальное окно скрыто изначально на 100% ширины экрана*/
+    position: fixed;/*при прокрутке модальное окно зафиксировано*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 45, 51, 0.5);
+    z-index: 10;
+    display: flex;
+ }
+.modal.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+.modal-dialog {
+    margin: auto;
+    max-width: 28.75rem;
+    padding: 2.5rem 3.125rem;
+    background-color: #fff;
+    position: relative;
+}
+.modal-close {
+    display: flex;
+    position: absolute;
+    top: 2.5rem;
+    right: 3.125rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EBEBF0;
+}
+.modal-title {
+    font-family: "Bebas Neue Book";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 120%;
+    color: #292D33;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+.modal-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828A99;
+}
+@media (max-width: 1600px) {
     html {
         font-size: 14px;
   }  
@@ -684,7 +849,7 @@ body {
   }
 }
 
-@media (max-width: 91.25rem) {
+@media (max-width: 1460px) {
     html {
         font-size: 13px;
   }  
@@ -708,7 +873,7 @@ body {
     }
 }
 
-@media (max-width: 75rem) {
+@media (max-width: 1200px) {
     html {
         font-size: 12px;
     }  
@@ -754,7 +919,7 @@ body {
     }
 }  
 
-@media (max-width: 62rem) {
+@media (max-width: 992px) {
     html {
         font-size: 12px;
       }  
