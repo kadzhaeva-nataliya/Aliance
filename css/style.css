@@ -19,6 +19,9 @@ body {
 .mobile-menu {
     display: none;
 }
+.footer-mobile-menu {
+    display: none;
+}
 .container {
     max-width: 90rem;
     margin: auto;
@@ -910,7 +913,7 @@ body {
         background-position: center;
     }
     .navbar {
-        height: 5rem;
+        height: 5.8rem;
     }
     .navbar-button {
         padding-left: 2rem;
@@ -939,6 +942,15 @@ body {
     .founder-content {
         max-width: 35rem;
     }
+    .cta-form {
+        height: 35%;
+        
+    }
+    .cta-image {
+        max-width: 35rem;
+        left: -48px;
+        
+    }
 }  
 
 @media (max-width: 992px) {
@@ -955,14 +967,20 @@ body {
         flex-grow: 1;
         justify-content: center;
     }      
-    
+    .logo-svg {
+        max-width: 10rem;
+    }
+    .navbar-button {
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+    }
     .mobile-menu-toggle {
         width: 80px; 
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.8rem;
+        padding: 2.3rem 2.5rem;
         border-right: 1px solid rgba(235, 235, 240, 0.2);
 
     }
@@ -987,7 +1005,8 @@ body {
         display: block;
         fill: #ffffff;
     }
-    .mobile-menu {       
+    .mobile-menu,
+    .footer-mobile-menu {       
         position: fixed;
         top: 0;
         right: 0;
@@ -1088,8 +1107,36 @@ body {
     .clients-wrapper {
         flex-direction: column;
     }
+    .cta-form {
+        max-width: 30rem;
+    }
+    .cta-image {
+        max-width: 30rem;
+        /* display: none; */
+    }
+    .footer-bottom{
+        display: none;
+    }
+
+    .footer-top {
+        display: none;
+      }
+    .footer-logo {
+        flex-grow: 1;
+        justify-content: center;
+    }      
+    
+    .footer-mobile-menu {
+        display: block;
+    }
+    .footer-mobile-wrapper {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    
+    }
 }
-@media (max-width:48rem) {
+@media (max-width:768px) {
     .container {
         max-width: 40rem;
     }
@@ -1097,7 +1144,7 @@ body {
         font-size: 4rem;
     }
     .header-content {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
     .card {
         flex-basis: 100%;
@@ -1107,17 +1154,19 @@ body {
         width: 100%;
         margin-bottom: 3.125rem;
     }
+    .cta-form {
+        max-width: 30rem;
+    }
+    .cta-image {
+        display: none;
+    }
+
 }
-@media (max-width:36rem) {
+@media (max-width:576px) {
     .container {
         max-width: 90%;
     }
-    .header-title {
-        font-size: 2rem;
-    }
-    .header-content {
-        padding-top: 2rem;
-    }
+    
     .trademark-card {
         grid-template-areas: 
         "logo title"
