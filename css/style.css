@@ -1127,13 +1127,12 @@ body {
     }      
     
     .footer-mobile-menu {
-        display: block;
+        /* display: block; */
     }
     .footer-mobile-wrapper {
         display: flex;
         align-items: start;
         flex-direction: column;
-    
     }
 }
 @media (max-width:768px) {
