@@ -1,17 +1,23 @@
 const navbar = document.querySelector(".navbar");
-const logo = document.querySelector(".logo-svg use");
+const logoLight = document.querySelector(".logo-light");
+const logo = document.querySelector(".logo-svg");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle"); /*Кнопка, которая вкл меню*/
 const menu = document.querySelector(".mobile-menu"); /*сама кнопка*/
+const isFront = document.body.classList.contains("front-page");
 
 const lightModeOn = (event) => {  /*создание функции включения светлого режима*/
     navbar.classList.add ("navbar-light");
-    logo.href.baseVal = "img/sprite.svg#logo-svg"
+    // logo.href.baseVal = "img/sprite.svg#logo-svg"
 }
 
 const lightModeOff = (event) => {  /*создание функции выключения светлого режима*/
     navbar.classList.remove ("navbar-light");
-    logo.href.baseVal = "img/sprite.svg#logo-light" 
+    // logo.href.baseVal = "img/sprite.svg#logo-light" 
 }
+
+const changeNavHeight = (height) => {
+  navbar.style.height = height;
+};
 
 const openMenu = (event) => { /*функция открывания меню*/
     menu.classList.add("is-open"); /*вешает класс is-open*/
@@ -26,10 +32,17 @@ const closeMenu = (event) => { /*функция закрывания меню*/
     lightModeOff();
 }
 
-window.addEventListener ("scroll", () => {
-    this.scrollY > 1 ? lightModeOn(): lightModeOff(); /*?-условие if, :-условие else. Читается как: это прокручено более, чем на 1 пиксель? Если Да - то включи светлую тему, если нет - то выключи светлую тему*/
+// window.addEventListener ("scroll", () => {
+//     this.scrollY > 1 ? lightModeOn(): lightModeOff(); /*?-условие if, :-условие else. Читается как: это прокручено более, чем на 1 пиксель? Если Да - то включи светлую тему, если нет - то выключи светлую тему*/
     /*Наведя на вызов функции + Ctrl можно перейти в описание функции*/
     
+// });
+window.addEventListener("scroll", () => {
+  this.scrollY > 1 ? changeNavHeight("4.5rem") : changeNavHeight ("5.875rem");
+  if (isFront) {
+    this.scrollY > 1 ? lightModeOn() : lightModeOff();
+  }
+
 });
 mMenuToggle.addEventListener("click",(event) => {             /*вешаем на кнопку mMenu отслеживание события клик*/
     event.preventDefault();               /*не реагировать на стандартный клик*/

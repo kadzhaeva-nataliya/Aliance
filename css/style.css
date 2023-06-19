@@ -40,16 +40,29 @@ body {
     z-index: 2;
     transition: background-color 0.2s, height 0.2s; /*цвет меняется плавно*/
 }
+.navbar-light {
+    background-color: #fff; 
+    color: #292D33;  
+ }
 
 .logo-svg {
     width: 9rem;
     height: 2.75rem;
+    
+}
+.logo-dark {
+    display: none;
 
 }
-.navbar-light {
-   background-color: #fff; 
-   color: #292D33;
-   height: 4.5rem;
+
+.navbar-light .logo-light {
+    display: none;
+}
+.navbar-light .logo-dark {
+    display: block;
+}
+.navbar-scroll {
+    height: .5rem;
 }
 .phone-icon {
     fill: #5C8EE6;
@@ -586,7 +599,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 45rem;
+    max-width: 38rem;
     width: 50%;
 }
 .cta-form-wrapper {
