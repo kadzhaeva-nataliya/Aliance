@@ -16,7 +16,10 @@
                 type="text" 
                 name="username"
                 class="input" 
-                placeholder=" "/>
+                placeholder=" "
+                maxlenght = "50"
+                required/> 
+                <!-- Параметр required означает, что без заполненных этих полей форма не отправится-->
                 <label class="input-group-label" for="user-name">Имя</label>
                 <!-- label-подсказка, что имнно писать в текстовом поле -->
               </div>
@@ -27,7 +30,9 @@
                 type="tel" 
                 class="input"
                 name="userphone"
-                placeholder=" "/>
+                placeholder=" "
+                maxlenght = "30"
+                required/>
                 <label class="input-group-label" for="user-phone">Номер телефона</label>
               </div>
               <!-- /.input-group -->
