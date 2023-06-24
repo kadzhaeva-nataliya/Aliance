@@ -243,7 +243,7 @@
         <!-- /.modal-close -->
         <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!
         </p>
-        <form action="#" class="modal-form">
+        <form action="handler.php" method="POST" class="modal-form">
           <div class="input-group-wrapper input-group-vertical">
             <!-- Обертка для поля имя и телефон usera. Это родительская форма, в кот.задаются флексовые настройки для того, чтобы элементы располагались рядом -->
             <div class="input-group modal-input-group">
@@ -289,5 +289,6 @@
     </div>
     <!-- /.modal -->
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
     
+    <script src="js/just-validate.production.min.js"></script>
+    <script src="js/main.js"></script>

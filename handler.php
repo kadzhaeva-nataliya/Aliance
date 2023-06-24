@@ -14,7 +14,7 @@ foreach($formData as $key => $value){
     $text .= $key . "<br>" . urlencode($value) . "</br>" . "%0A" ; /*создаем переменную $text в которую добавляется ключи и значения*/
 }
 
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&text={$text}&parse_mode=html", "r");
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&text={$text}", "r");
 
 if ($sendToTelegram) {
     echo "Success";

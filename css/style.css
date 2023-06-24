@@ -669,6 +669,21 @@ body {
     padding: 0 10px;
     max-height: .625rem;
 }
+
+.input.is-invalid {
+    border: 1px solid red;
+}
+.just-validate-error-label {
+    position: absolute;
+    top: 0;
+    right: .625rem;
+    background-color: inherit;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    display: inline-block;
+}
 .cta-form-footer {
     display: flex;
     margin-top: 1.875rem;
