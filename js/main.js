@@ -155,6 +155,25 @@ forms.forEach((form) => {
       },
     ])
     .onSuccess((event) => {
-      console.log(event.target);
+      const thisForm = event.target; 
+      /*наша форма*/
+      const formData = new FormData(thisForm); /*данные из нашей формы*/
+      const ajaxSend = (formData) => {
+        fetch(thisForm.getAttribute("action"),{
+          method: thisForm.getAttribute("method"),
+          body: formData,
+        }).then ((response) => {
+          if (response.ok) {
+            thisForm.reset();
+            alert("Форма отправлена!");
+          } else {
+            alert("Ошибка. Текст ошибки: ".response.statusText);
+          }         
+        });
+        
+      }
+      ajaxSend(FormData);  
+      /*jaxSend - незаментный (без перезагрузки) запрос на сервер*/
+      /* thisForm.getAttribute("action") - указание, где взять url для сборщика информации/ Тас будет handler*/
     });
 }); 
