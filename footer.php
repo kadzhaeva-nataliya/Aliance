@@ -39,7 +39,7 @@
             </div>
             <!-- /.input-group-wrapper -->
             <div class="cta-form-footer">
-              <button type="submit" class="button cta-form-button">Отправить заявку</button> 
+              <button type="submit" class="button cta-form-button" data-target="#alert-modal">Отправить заявку</button> 
               <div class="notify">
                 <svg class="notify-icon" width="14" height="14">
                   <use href="img/sprite.svg#shield"></use>
@@ -232,10 +232,10 @@
       </div>
       <!-- /.container -->
     </footer>
-    <div class="modal">
+    <div class="modal" id="feedback-modal">
       <div class="modal-dialog">
         <h2 class="modal-title">ЕСТЬ ВОПРОСЫ?</h2>       
-        <a href="#" class="modal-close" data-toggle="modal">
+        <a href="#" class="modal-close" data-toggle="modal" data-target="#feedback-modal">
           <svg class="close-icon" width="24" height="24" >
             <use href="img/sprite.svg#close"></use>
           </svg>
@@ -288,6 +288,22 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+    <div class="modal alert-modal" id="alert-modal">
+      <div class="modal-dialog">
+        <h2 class="modal-title">СПАСИБО!</h2>       
+        <a href="#" class="modal-close" data-toggle="modal" data-target="#alert-modal">
+          <svg class="close-icon" width="24" height="24" >
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+          <img src="img/thanks_illu.jpg" alt="Спасибо" class="thanks-foto">
+        </a>
+        <!-- /.modal-close -->
+        <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!
+        </p>
+        <!-- /.modal-form -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
     <script src="js/swiper-bundle.min.js"></script>
     
     <script src="js/just-validate.production.min.js"></script>

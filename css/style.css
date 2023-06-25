@@ -893,6 +893,21 @@ body {
     width: 100%;
     margin-bottom: 1.5rem;
 }
+.alert-modal {
+    position: relative;
+    height: 34.625rem;
+    width: 21.5625rem;
+}
+.thanks-foto {
+    position: absolute;
+    padding-top: 1.875rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    width: 17.8125rem;
+    height: 15.3125rem;
+    padding-bottom: 17.375rem;
+    object-fit: cover; /*Не деформируется картинка*/
+}
 @media (max-width: 1600px) {
     html {
         font-size: 14px;
