@@ -229,94 +229,11 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="section production">
-      <div class="container">
-        <div class="sepаrator">
-        </div> 
-          <h2 class="section-title">Контрактное производство</h2> 
-          <div class="cards">
-            <a href="#" class="card">
-              <div class="card-content">
-                <h3 class="card-title">Автомобильная химия</h3>
-                <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение форм воздействия.</p>
-              </div>
-              <!-- /.card-content -->              
-              <img src="img/auto-him.png" alt="Автомобильная химия" class="card-image">
-            </a>
-
-            <a href="#" class="card">
-              <div class="card-content">
-                <h3 class="card-title">Бытовая химия</h3>
-                <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
-              </div>
-              <!-- /.card-content -->              
-              <img src="img/byt-him.png" alt="Бытовая химия" class="card-image">
-            </a>
-
-            <a href="#" class="card">
-              <div class="card-content">
-                <h3 class="card-title">Дезинфицирующие средства</h3>
-                <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
-              </div>
-              <!-- /.card-content -->            
-              <img src="img/dez-him.png" alt="Дезинфицирующие средства" class="card-image">
-            </a>
-
-            <a href="#" class="card">
-              <div class="card-content">
-                <h3 class="card-title">Пищевые аэрозоли</h3>
-                <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение форм воздействия.</p>
-              </div>
-              <!-- /.card-content -->            
-              <img src="img/dez-him.png" alt="Пищевые аэрозоли" class="card-image">
-            </a>
-
-            <a href="#" class="card">
-              <div class="card-content">
-                <h3 class="card-title">Косметическая продукция</h3>
-                <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
-              </div>
-              <!-- /.card-content -->             
-              <img src="img/auto-him.png" alt="Косметическая продукция" class="card-image">
-            </a>
-
-            <a href="#" class="card">
-              <div class="card-content">
-                <h3 class="card-title">Краски аэрозольные</h3>
-                <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
-              </div>
-              <!-- /.card-content -->              
-              <img src="img/byt-him.png" alt="Краски аэрозольные" class="card-image">
-            </a>
-
-          </div>
-          <!-- /.cards --> 
-      </div>
-      <!-- /.container --> 
-    </section>
+    <?php $block_title = "Контрактное производство"; include_once('./template-parts/production-block.php')?>
     <?php $block_title = "Собственные торговые марки"; include_once('./template-parts/trademarks-block.php')?>
-    <section class="section-founder">
-      <img src="img/founder.jpg" alt="Основатель" class="founder-foto">
-      <div class="container">
-        <div class="founder-content-wrapper">
-          <div class="founder-content">
-            <div class="sepаrator">
-            </div> 
-            <h2 class="section-title">Отношение к делу и к клиентам</h2> 
-            <p class="founder-text">
-              Кстати, интерактивные прототипы описаны максимально подробно. Повседневная практика показывает, что укрепление и развитие внутренней структуры говорит о возможностях соответствующих условий активизации. Внезапно, независимые государства, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут подвергнуты целой серии независимых исследований. С учётом сложившейся международной обстановки, синтетическое тестирование выявляет срочную потребность системы массового участия.
-              А ещё действия представителей оппозиции, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе. Не следует, однако, забывать, что выбранный нами инновационный путь в значительной степени обусловливает важность дальнейших направлений развития.
-            </p>
-            <a href="#" class="button-link">Подробнее о компании</a>
-          </div>
-        </div>
-        <!-- /.founder-content-wrapper -->
+    <?php $block_title = "О компании"; include_once('./template-parts/founder-block.php')?>
 
-        <!-- /.founder-content -->        
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section-founder -->
+    
     <section class="section-clients">
       <div class="container">
         <div class="sepаrator">

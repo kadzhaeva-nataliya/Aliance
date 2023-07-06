@@ -15,7 +15,7 @@
               <!-- /.card-content -->  
                 <picture class="card-content">
                     <source type="image/webp" srcset="img/auto-him.webp">
-                    <source type="image/jpeg" srcset="img/auto-him.jpg">
+                    <source type="image/jpeg" srcset="img/auto-him.png">
                     <img src="img/auto-him.png" alt="Автомобильная химия" class="card-image">
                 </picture>         
             </a>
@@ -28,7 +28,7 @@
               <!-- /.card-content -->              
                 <picture class="card-content">
                     <source type="image/webp" srcset="img/byt-him.webp">
-                    <source type="image/jpeg" srcset="img/byt-him.jpg">
+                    <source type="image/jpeg" srcset="img/byt-him.png">
                     <img src="img/byt-him.png" alt="Бытовая химия" class="card-image">
                 </picture>       
             </a>
@@ -41,7 +41,7 @@
               <!-- /.card-content -->            
                 <picture class="card-content">
                     <source type="image/webp" srcset="img/dez-him.webp">
-                    <source type="image/jpeg" srcset="img/dez-him.jpg">
+                    <source type="image/jpeg" srcset="img/dez-him.png">
                     <img src="img/dez-him.png" alt="Дезинфицирующие средства" class="card-image">
                 </picture> 
             </a>
@@ -54,7 +54,7 @@
               <!-- /.card-content -->            
                 <picture class="card-content">
                     <source type="image/webp" srcset="img/dez-him.webp">
-                    <source type="image/jpeg" srcset="img/dez-him.jpg">
+                    <source type="image/jpeg" srcset="img/dez-him.png">
                     <img src="img/dez-him.png" alt="Пищевые аэрозоли" class="card-image">
                 </picture>
             </a>
@@ -67,7 +67,7 @@
               <!-- /.card-content -->             
                 <picture class="card-content">
                     <source type="image/webp" srcset="img/auto-him.webp">
-                    <source type="image/jpeg" srcset="img/auto-him.jpg">
+                    <source type="image/jpeg" srcset="img/auto-him.png">
                     <img src="img/auto-him.png" alt="Косметическая продукция" class="card-image">
                 </picture> 
             </a>
@@ -80,7 +80,7 @@
               <!-- /.card-content -->              
                 <picture class="card-content">
                     <source type="image/webp" srcset="img/byt-him.webp">
-                    <source type="image/jpeg" srcset="img/byt-him.jpg">
+                    <source type="image/jpeg" srcset="img/byt-him.png">
                     <img src="img/byt-him.png" alt="Краски аэрозольные" class="card-image">
                 </picture> 
             </a>
