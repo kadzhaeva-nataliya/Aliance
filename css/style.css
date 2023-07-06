@@ -1,3 +1,7 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
+@import url("swiper-bundle.min.css");
+
 * {
     box-sizing: border-box; /* Ширина и высота элементов считаются пропорционально */
 }
@@ -76,9 +80,11 @@ body {
 .header{
     padding-top: 5.875rem;
     }
-
-.header-image{
+.no-webp .header-image {
     background-image: url('../img/header-bg.jpeg');
+}
+.header-image{
+    background-image: url('../img/header-bg.webp');
     background-size: cover; /*фоновая картинка занимает весь экран*/
     background-repeat: no-repeat; /*не повторяется*/
     background-position: center -15.5625rem;/* картинка всегда загружается по центру*/

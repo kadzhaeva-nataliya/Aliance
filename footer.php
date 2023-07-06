@@ -288,14 +288,13 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-    <div class="modal alert-modal" id="alert-modal">
+    <div class="modal" id="alert-modal">
       <div class="modal-dialog">
         <h2 class="modal-title">СПАСИБО!</h2>       
         <a href="#" class="modal-close" data-toggle="modal" data-target="#alert-modal">
           <svg class="close-icon" width="24" height="24" >
             <use href="img/sprite.svg#close"></use>
           </svg>
-          <img src="img/thanks_illu.jpg" alt="Спасибо" class="thanks-foto">
         </a>
         <!-- /.modal-close -->
         <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!
