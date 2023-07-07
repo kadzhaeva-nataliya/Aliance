@@ -1,9 +1,11 @@
-<section class="section-founder">
-    <picture class="founder-foto">
-        <source type="image/webp" srcset="img/founder.webp"> <!-- /*Браузер если сможет прочитать этот формат, к следующему не пойдет, а если не сможет, то возьмет формат из следующего type*/ -->
-        <source type="image/jpeg" srcset="img/founder.jpg">
-        <img src="img/founder.jpg" alt="founder">
-    </picture>
+<section class="section founder section-founder">
+    <picture >
+        <source type="image/webp" srcset="img/founder.webp">
+        <!-- /*Браузер если сможет прочитать этот формат, к следующему не пойдет, а если не сможет, то возьмет формат из следующего type*/ -->
+        <source type="image/jpeg" srcset="founder.jpg">
+        <img src="img/founder.jpg" alt="founder" class="founder-foto">
+    </picture> 
+    <picture >
     
     <div class="container">
         <div class="founder-content-wrapper">

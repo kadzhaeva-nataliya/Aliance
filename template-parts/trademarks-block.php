@@ -1,4 +1,4 @@
-<section class="section-trademark">
+<section class="section trademark">
     <div class="container">
         
         <?php 
